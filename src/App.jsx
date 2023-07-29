@@ -1,6 +1,5 @@
 import './App.css';
-import Header from './components/Header';
-import Footer from './components/Footer';
+import Layout from './layouts/Layout';
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Reservation from './pages/Reservation';
@@ -8,12 +7,12 @@ import Reservation from './pages/Reservation';
 const App = () => {
   return (
     <>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/reservation" element={<Reservation />} />
-      </Routes>
-      <Footer />
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/reservation" element={<Reservation />} />
+        </Routes>
+      </Layout>
     </>
   );
 };
