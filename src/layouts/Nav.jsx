@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 
-import './nav.css';
+import './nav.scss';
 import logo from '../assets/img/logo.png';
 import hamburgerIconMenu from '../icons/hamburger-menu.svg';
 

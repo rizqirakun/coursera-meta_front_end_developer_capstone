@@ -1,0 +1,36 @@
+:root {
+    --primary: #495E57;
+    --accent: #F4CE14;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 61.625rem;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grid {
+    display: grid;
+}
+
+.button-primary {
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    background-color: var(--accent);
+    color: var(--primary);
+    font-weight: bold;
+    border: 0.1875rem solid --accent;
+    transition: background, border, color 0.5s;
+
+    &:hover,
+    &:focus {
+        background-color: var(--primary);
+        border-color: var(--primary);
+        color: white;
+    }
+}

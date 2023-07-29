@@ -8,23 +8,24 @@
     justify-self: start;
     align-self: center;
     line-height: 0;
-}
 
-.nav-bar-logo img {
-    max-width: 15.625rem;
+    >img {
+        max-width: 15.625rem;
+    }
 }
 
 .nav-bar-hamburger {
     grid-column: 2;
     display: none;
     cursor: pointer;
-    color: #495E57;
+    color: var(--primary);
     transition: background-color 0.5s;
+
+    &:hover {
+        background-color: var(--accent);
+    }
 }
 
-.nav-bar-hamburger:hover {
-    background-color: #F4CE14;
-}
 
 .nav-bar-links {
     grid-column: 3;
@@ -35,31 +36,31 @@
     padding-inline-start: 0;
     list-style-type: none;
     transition: left 0.3s;
-}
 
-.nav-bar-links.expanded {
-    left: 0;
-}
+    &.expanded {
+        left: 0;
+    }
 
-.nav-bar-links li {
-    display: flex;
-}
+    li {
+        display: flex;
+    }
 
-.nav-bar-links a {
-    display: flex;
-    align-items: center;
-    padding-top: 1.5rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-bottom: 1.5rem;
-    text-transform: uppercase;
-    transition: background-color 0.5s;
+    a {
+        display: flex;
+        align-items: center;
+        padding-top: 1.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-bottom: 1.5rem;
+        text-transform: uppercase;
+        transition: background-color 0.5s;
+    }
 }
 
 .current-location,
 .nav-bar-links a:hover,
 .nav-bar-links a:focus {
-    background-color: #F4CE14;
+    background-color: var(--accent);
 }
 
 @media only screen and (max-width: 992px) {
@@ -82,12 +83,13 @@
         height: 100vh;
         top: 0;
         left: -50%;
-        background-color: #FFFFFF;
+        background-color: white;
         box-shadow: 2px 0px 4px 0px rgba(0, 0, 0, 0.2);
         z-index: 100;
+
+        li {
+            flex-direction: column;
+        }
     }
 
-    .nav-bar-links li {
-        flex-direction: column;
-    }
 }

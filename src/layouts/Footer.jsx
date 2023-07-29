@@ -1,3 +1,5 @@
+import './footer.scss';
+
 import {
   faFacebook,
   faTwitter,
@@ -10,7 +12,6 @@ import {
   faPhone,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import './footer.css';
 import footerLogo from '../assets/img/footer-logo.png';
 
 const contacts = [
