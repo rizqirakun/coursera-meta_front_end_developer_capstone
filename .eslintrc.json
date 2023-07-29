@@ -15,5 +15,8 @@
     "browser": true,
     "es2021": true,
     "jest": true
+  },
+  "rules": {
+    "react/prop-types": "off"
   }
 }

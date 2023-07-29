@@ -1,17 +1,29 @@
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+
+import logo from '../assets/img/logo.png';
+import hamburgerIconMenu from '../icons/hamburger-menu.svg';
+
 const navLinks = [
-  { name: 'Home', link: '' },
-  { name: 'About', link: '' },
-  { name: 'Menu', link: '' },
-  { name: 'Reservations', link: '' },
+  { name: 'Home', anchor: '/' },
+  { name: 'About', anchor: '' },
+  { name: 'Menu', anchor: '' },
+  { name: 'Reservation', anchor: '/reservation' },
 ];
 
 const Nav = () => {
+  const [isNavExpanded, setIsNavExpanded] = useState(false);
+
   return (
-    <nav>
-      <ul>
+    <nav className="grid nav-bar">
+      <img src={logo} alt="Little Lemon logo" />
+      <button type="button" onClick={() => setIsNavExpanded(!isNavExpanded)}>
+        <img src={hamburgerIconMenu} alt="Navigation icon menu" />
+      </button>
+      <ul className={isNavExpanded ? 'expanded' : ''}>
         {navLinks.map((navLink, index) => (
           <li key={index}>
-            <a href={navLink.link}>{navLink.name}</a>
+            <Link to={navLink.anchor}>{navLink.name}</Link>
           </li>
         ))}
       </ul>
