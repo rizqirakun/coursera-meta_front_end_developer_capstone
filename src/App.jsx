@@ -1,4 +1,7 @@
+import 'modern-normalize/modern-normalize.css';
+import '@fontsource/inter';
 import './App.scss';
+
 import Layout from './layouts/Layout';
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';

@@ -4,13 +4,7 @@ import { useLocation, Link } from 'react-router-dom';
 import './nav.scss';
 import logo from '../assets/img/logo.png';
 import hamburgerIconMenu from '../icons/hamburger-menu.svg';
-
-const navLinks = [
-  { name: 'Home', anchor: '/' },
-  { name: 'About', anchor: '' },
-  { name: 'Menu', anchor: '' },
-  { name: 'Reservation', anchor: '/reservation' },
-];
+import navLinks from './links';
 
 const Nav = () => {
   const { pathname } = useLocation();

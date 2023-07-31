@@ -12,11 +12,14 @@ import {
   faPhone,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import footerLogo from '../assets/img/footer-logo.png';
+import footerLogo from '../assets/img/footer-logo-white.png';
+
+import { Link } from 'react-router-dom';
+import navLinks from './links';
 
 const contacts = [
-  { icon: faLocationDot, info: 'address' },
-  { icon: faPhone, info: '123455' },
+  { icon: faLocationDot, info: '431 Lemon Street, Citrusville, FL 122, USA' },
+  { icon: faPhone, info: '124355' },
   { icon: faEnvelope, info: 'contact@littlelemon.com' },
 ];
 
@@ -34,6 +37,13 @@ const Footer = () => {
         <img className="site-footer-logo" src={footerLogo} alt="Little Lemon" />
         <nav className="site-footer-nav">
           <h4>Sitemap</h4>
+          <ul>
+            {navLinks.map((link, index) => (
+              <li key={index}>
+                <Link to={link.path}>{link.name}</Link>
+              </li>
+            ))}
+          </ul>
         </nav>
         <div className="site-footer-contact">
           <h4>Contact us</h4>
