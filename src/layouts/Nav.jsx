@@ -4,7 +4,7 @@ import { useLocation, Link } from 'react-router-dom';
 import './nav.scss';
 import logo from '../assets/img/logo.png';
 import hamburgerIconMenu from '../icons/hamburger-menu.svg';
-import navLinks from './links';
+import navLinks from '../utils/links';
 
 const Nav = () => {
   const { pathname } = useLocation();
@@ -33,8 +33,8 @@ const Nav = () => {
         {navLinks.map((navLink, index) => (
           <li key={index}>
             <Link
-              className={pathname === navLink.path ? 'current-location' : ''}
-              to={navLink.path}
+              className={pathname === navLink.anchor ? 'current-location' : ''}
+              to={navLink.anchor}
             >
               {navLink.name}
             </Link>

@@ -15,7 +15,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import footerLogo from '../assets/img/footer-logo-white.png';
 
 import { Link } from 'react-router-dom';
-import navLinks from './links';
+import navLinks from '../utils/links';
 
 const contacts = [
   { icon: faLocationDot, info: '431 Lemon Street, Citrusville, FL 122, USA' },
